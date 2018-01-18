@@ -18,7 +18,7 @@ do
     SUCCESSFUL_RUN=$(eval echo "${JOB_WITH_STATS}" | awk '{print $3}')
     if [ ${SUCCESSFUL_RUN} == "1" ]; then
       echo "Successfully ended job \"${JOB}\", delete it"
-      oc delete job ${JOB} -n ${DEFAULT_NAMESPACE}
+      oc delete job ${JOB} -n ${DEFAULT_NAMESPACE} --cascade=false
     else
       echo "\"${JOB}\" not successfully ended"
     fi
