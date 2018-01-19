@@ -22,4 +22,4 @@ items:
             containers:
             - name: scheduled-jobs-cleanup
               image: willemvd/openshift-scheduledjobs-cleanup:1.1.2
-            restartPolicy: OnFailure
+            restartPolicy: Never
